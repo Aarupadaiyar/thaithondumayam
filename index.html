@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en" data-lang="en" data-title-en="Thai Thondu Maiyam · Service is our worship" data-title-ta="தாய் தொண்டு மையம் · தொண்டே எங்கள் வழிபாடு">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thai Thondu Maiyam · Service is our worship</title>
+  <meta name="description" content="Since 1993, Thai Thondu Maiyam has raised children, run the Thiruvalluvar nursery and primary school, cared for elders and served annadhanam. Tamil and English." />
+  <meta name="theme-color" content="#fbf6ec" />
+  <meta property="og:title" content="Thai Thondu Maiyam · தாய் தொண்டு மையம்" />
+  <meta property="og:description" content="Service is our worship. Since 1993." />
+  <meta property="og:image" content="/images/og.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- start the hero statue + decoder downloading in parallel with the JS -->
+  <link rel="preload" href="/models/shiva.glb" as="fetch" crossorigin="anonymous" />
+  <link rel="preload" href="/draco/draco_wasm_wrapper.js" as="fetch" crossorigin="anonymous" />
+  <link rel="preload" href="/draco/draco_decoder.wasm" as="fetch" crossorigin="anonymous" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600&family=Noto+Serif+Tamil:wght@700&display=swap" rel="stylesheet" />
+  <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('ttm-lang');if(l)document.documentElement.dataset.lang=l}catch(e){}</script>
+  <script type="module" src="/src/home.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="stage" aria-hidden="true"><canvas></canvas></div>
+
+  <!-- ============ NAV ============ -->
+  <header>
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 60V14M32 6l-5 10h10zM18 10c0 12 4 18 14 18s14-6 14-18M18 10l-3 6M46 10l3 6"/></svg>
+        <span lang="en">Thai Thondu Maiyam</span><span lang="ta">தாய் தொண்டு மையம்</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#journey"><span lang="en">Journey</span><span lang="ta">பயணம்</span></a></li>
+        <li><a href="#temple"><span lang="en">Sanctum</span><span lang="ta">சன்னிதி</span></a></li>
+        <li><a href="/children-home.html"><span lang="en">Children's Home</span><span lang="ta">குழந்தைகள் இல்லம்</span></a></li>
+        <li><a href="/school.html"><span lang="en">School</span><span lang="ta">பள்ளி</span></a></li>
+        <li><a href="/elder-care.html"><span lang="en">Elder Care</span><span lang="ta">மூத்தோர் இல்லம்</span></a></li>
+        <li><a href="#support"><span lang="en">Support</span><span lang="ta">உதவுங்கள்</span></a></li>
+      </ul>
+      <button class="lang" type="button"><span class="l-en">EN</span><span class="l-ta">தமிழ்</span></button>
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+    </nav>
+    <div class="menu" id="menu">
+      <a href="#journey"><span lang="en">Journey</span><span lang="ta">பயணம்</span></a>
+      <a href="/children-home.html"><span lang="en">Children's Home</span><span lang="ta">குழந்தைகள் இல்லம்</span></a>
+      <a href="/school.html"><span lang="en">School</span><span lang="ta">பள்ளி</span></a>
+      <a href="/elder-care.html"><span lang="en">Elder Care</span><span lang="ta">மூத்தோர் இல்லம்</span></a>
+      <a href="#support"><span lang="en">Support</span><span lang="ta">உதவுங்கள்</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__glow"></div>
+      <div class="wrap hero__inner">
+        <div>
+          <span class="eyebrow"><span lang="en">Thai Thondu Maiyam · 1993 to 2026</span><span lang="ta">தாய் தொண்டு மையம் · 1993 – 2026 பயணம்</span></span>
+          <h1>
+            <span lang="en"><span class="split-line"><span>Service is</span></span><span class="split-line"><span>our worship.</span></span></span>
+            <span lang="ta"><span class="split-line"><span>தொண்டே</span></span><span class="split-line"><span>எங்கள் வழிபாடு</span></span></span>
+          </h1>
+          <p class="hero__sub reveal" data-d="2">
+            <span lang="en">For over three decades we have raised children, taught young minds, cared for elders and fed the hungry, in the light of Shiva.</span>
+            <span lang="ta">முப்பது ஆண்டுகளுக்கும் மேலாக குழந்தைகளை வளர்த்து, கல்வி புகட்டி, முதியோரைப் பேணி, பசித்தோருக்கு உணவளித்து வருகிறோம்.</span>
+          </p>
+          <div class="hero__cta reveal" data-d="3">
+            <a class="btn btn--primary" href="#support">
+              <span lang="en">Support a child</span><span lang="ta">ஒரு குழந்தைக்கு உதவுங்கள்</span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#journey"><span lang="en">Walk our journey</span><span lang="ta">எங்கள் பயணம்</span></a>
+          </div>
+          <div class="scroll-cue"><i></i><span lang="en">Scroll</span><span lang="ta">கீழே உருட்டவும்</span></div>
+        </div>
+        <div class="hero__since reveal" data-d="3">
+          <b><span data-count="200">200</span>+</b>
+          <span lang="en">children raised</span><span lang="ta">குழந்தைகள் பயன்</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="wrap about__grid">
+        <div class="reveal">
+          <span class="eyebrow"><span lang="en">Who we are</span><span lang="ta">நாங்கள் யார்</span></span>
+          <h2 id="about-title" class="h2"><span lang="en">A mother's heart for every child.</span><span lang="ta">ஒவ்வொரு குழந்தைக்கும் ஒரு தாயின் இதயம்</span></h2>
+          <p class="lead"><span lang="en">Thai Thondu Maiyam was founded in 1993 by Thai Rasi Jegatheeswaran as a social service organisation. What began as one resolve has grown into a children's home, a village school and a kitchen that has never stopped serving.</span><span lang="ta">1993 ஆம் ஆண்டு தாய் ராசி ஜெகதீஸ்வரன் அவர்களால் தொடங்கப்பட்ட சமூக சேவை அமைப்பு தாய் தொண்டு மையம். ஒரு உறுதியில் தொடங்கிய பயணம் இன்று குழந்தைகள் இல்லம், கிராமப் பள்ளி, இடைவிடாத அன்னதானம் என வளர்ந்துள்ளது.</span></p>
+          <div class="name-meaning">
+            <div class="nm reveal" data-d="1"><b lang="ta" class="always">தாய்</b><span><span lang="en">Thai · mother</span><span lang="ta">அன்னை</span></span></div>
+            <div class="nm reveal" data-d="2"><b lang="ta" class="always">தொண்டு</b><span><span lang="en">Thondu · selfless service</span><span lang="ta">தன்னலமற்ற சேவை</span></span></div>
+            <div class="nm reveal" data-d="3"><b lang="ta" class="always">மையம்</b><span><span lang="en">Maiyam · a centre</span><span lang="ta">சேவையின் இருப்பிடம்</span></span></div>
+          </div>
+        </div>
+        <figure class="founder reveal" data-d="1">
+          <div class="media" data-src="/images/founder.jpg" data-alt-en="Thai Rasi Jegatheeswaran, founder" data-alt-ta="நிறுவனர் தாய் ராசி ஜெகதீஸ்வரன்" aria-label="Thai Rasi Jegatheeswaran, founder" role="img"></div>
+          <figcaption><b><span lang="en">Thai Rasi Jegatheeswaran</span><span lang="ta">தாய் ராசி ஜெகதீஸ்வரன்</span></b><span><span lang="en">Founder · 1993</span><span lang="ta">நிறுவனர் · 1993</span></span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+
+    <!-- ============ JOURNEY ============ -->
+    <section class="section journey" id="journey" aria-labelledby="journey-title">
+      <div class="journey__pin">
+        <div class="wrap journey__head">
+          <span class="eyebrow"><span lang="en">Our journey</span><span lang="ta">எங்கள் பயணம்</span></span>
+          <div class="section__head" style="margin-bottom:0">
+            <h2 id="journey-title"><span lang="en">Thirty three years of seva.</span><span lang="ta">முப்பத்து மூன்று ஆண்டுகள் சேவை</span></h2>
+          </div>
+        </div>
+        <div class="journey__track">
+          <article class="year-card">
+            <div class="year-card__year">1993<small><span lang="en">The beginning</span><span lang="ta">தொடக்கம்</span></small></div>
+            <h3><span lang="en">A movement of service begins</span><span lang="ta">சமூக சேவை அமைப்பு தொடக்கம்</span></h3>
+            <p><span lang="en">Founded by Thai Rasi Jegatheeswaran as a social service organisation.</span><span lang="ta">1993 ஆம் ஆண்டு தாய் ராசி ஜெகதீஸ்வரன் அவர்களால் தொடங்கப்பட்ட சமூக சேவை அமைப்பு.</span></p>
+          </article>
+          <article class="year-card">
+            <div class="year-card__year">1998<small><span lang="en">Children's Home</span><span lang="ta">குழந்தைகள் இல்லம்</span></small></div>
+            <h3><span lang="en">A home for children in need</span><span lang="ta">ஏழை எளிய குழந்தைகளுக்கு ஒரு இல்லம்</span></h3>
+            <p><span lang="en">Education, food, clothing and medical care. More than 200 children have grown up with us.</span><span lang="ta">கல்வி, உணவு, உடை, மருத்துவ வசதிகள். இதுவரை 200க்கும் மேற்பட்ட குழந்தைகள் பயனடைந்து வருகிறார்கள்.</span></p>
+            <span class="year-card__tag"><span lang="en">Ongoing</span><span lang="ta">தொடர்கிறது</span></span>
+          </article>
+          <article class="year-card">
+            <div class="year-card__year">2006<small><span lang="en">to 2014 · Elder Home</span><span lang="ta">முதல் 2014 வரை · மூத்தோர் இல்லம்</span></small></div>
+            <h3><span lang="en">Dignity for our elders</span><span lang="ta">மூத்தோருக்கு மரியாதையான வாழ்வு</span></h3>
+            <p><span lang="en">For eight years we ran a home where elders were cared for as family.</span><span lang="ta">2006 முதல் 2014 வரை மூத்தோர் இல்லம் நடத்தப்பட்டது.</span></p>
+          </article>
+          <article class="year-card">
+            <div class="year-card__year">2014<small><span lang="en">Thiruvalluvar School</span><span lang="ta">திருவள்ளுவர் பள்ளி</span></small></div>
+            <h3><span lang="en">Thiruvalluvar Nursery &amp; Primary School</span><span lang="ta">திருவள்ளுவர் மழலையர் தொடக்கப்பள்ளி</span></h3>
+            <p><span lang="en">Early learning for village children from modest economic backgrounds.</span><span lang="ta">அருகில் உள்ள கிராமம் சார்ந்த எளிய பொருளாதார பின்னணி கொண்ட குழந்தைகள் பயனடைந்து வருகிறார்கள்.</span></p>
+            <span class="year-card__tag"><span lang="en">Ongoing</span><span lang="ta">தொடர்கிறது</span></span>
+          </article>
+          <article class="year-card year-card--accent">
+            <div class="year-card__year">2026<small><span lang="en">Today · Annadhanam</span><span lang="ta">இன்று · அன்னதானம்</span></small></div>
+            <h3><span lang="en">The kitchen never rests</span><span lang="ta">அன்னதானம் தொடர்கிறது</span></h3>
+            <p><span lang="en">Annadhanam, the sacred gift of food, continues without pause.</span><span lang="ta">தொடர்ந்து அன்னதானம் நடைபெற்று வருகிறது.</span></p>
+          </article>
+        </div>
+        <div class="wrap"><div class="journey__progress"><i></i></div></div>
+      </div>
+    </section>
+
+    <!-- ============ TEMPLE / SANCTUM (3D lingam lives in .temple__stage) ============ -->
+    <section class="section temple" id="temple" aria-labelledby="temple-title">
+      <div class="wrap temple__grid">
+        <div class="temple__stage" aria-hidden="true">
+          <div class="temple__glow"></div>
+          <svg class="temple__mantra" viewBox="0 0 400 400"><defs><path id="mantra-path" d="M200 200m-180 0a180 180 0 1 1 360 0a180 180 0 1 1 -360 0"/></defs><text><textPath href="#mantra-path" textLength="1120">ஓம் நமசிவாய · OM NAMAH SHIVAYA · ஓம் நமசிவாய · OM NAMAH SHIVAYA · </textPath></text></svg>
+          <svg class="temple__mantra temple__mantra--inner" viewBox="0 0 400 400"><circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2 10"/></svg>
+        </div>
+        <div class="temple__text">
+          <span class="eyebrow reveal"><span lang="en">The sanctum</span><span lang="ta">சன்னிதி</span></span>
+          <h2 id="temple-title" class="h2 reveal"><span lang="en">Shiva at the heart of it all.</span><span lang="ta">எல்லாவற்றின் மையத்தில் சிவன்</span></h2>
+          <p class="lead reveal"><span lang="en">Before the classrooms and the kitchen, there was faith. Every meal we cook and every lesson we teach is offered at the feet of Shiva.</span><span lang="ta">வகுப்பறைகளுக்கும் அடுக்களைக்கும் முன்னால் இருந்தது இறை நம்பிக்கை. நாங்கள் சமைக்கும் ஒவ்வொரு உணவும், கற்பிக்கும் ஒவ்வொரு பாடமும் சிவனின் திருவடிகளுக்கே சமர்ப்பணம்.</span></p>
+          <ul class="creed">
+            <li class="reveal"><b lang="ta" class="always">நமசிவாய</b><span><span lang="en">Namah Shivaya · the five sacred syllables</span><span lang="ta">பஞ்சாட்சர மந்திரம்</span></span></li>
+            <li class="reveal" data-d="1"><b lang="ta" class="always">அன்பே சிவம்</b><span><span lang="en">Anbe Sivam · love itself is Shiva</span><span lang="ta">அன்பே கடவுள்</span></span></li>
+            <li class="reveal" data-d="2"><b lang="ta" class="always">தொண்டு</b><span><span lang="en">Thondu · service offered as worship</span><span lang="ta">வழிபாடாகும் சேவை</span></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ TAGLINE ============ -->
+    <section class="tagline" aria-label="Our belief">
+      <div class="wrap">
+        <p class="tagline__text">
+          <span lang="en"><mark>Anbe Sivam. Love is Shiva.</mark> Every child we raise and every meal we serve is our offering.</span>
+          <span lang="ta"><mark>அன்பே சிவம்.</mark> நாங்கள் வளர்க்கும் ஒவ்வொரு குழந்தையும், பரிமாறும் ஒவ்வொரு உணவும் இறைவனுக்கான எங்கள் காணிக்கை.</span>
+        </p>
+        <p class="tagline__by reveal"><span lang="en">Inspired by Tirumular's Tirumantiram</span><span lang="ta">திருமூலரின் திருமந்திரத்தின் வழியில்</span></p>
+      </div>
+    </section>
+
+    <!-- ============ VALUES ============ -->
+    <section class="section values-sec" aria-labelledby="values-title">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <span class="eyebrow"><span lang="en">What we live by</span><span lang="ta">எங்கள் நெறி</span></span>
+          <h2 id="values-title"><span lang="en">Four words hold us together.</span><span lang="ta">நான்கு சொற்கள், ஒரே வாழ்வு</span></h2>
+        </div>
+        <div class="values">
+          <article class="value reveal" data-d="0" data-tilt><span class="value__glyph" aria-hidden="true">அன்பு</span><h3><span lang="en">Anbu · Love</span><span lang="ta">அன்பு</span></h3><p><span lang="en">Every child who comes to us is welcomed as our own.</span><span lang="ta">இங்கு வரும் ஒவ்வொரு குழந்தையும் எங்கள் சொந்தக் குழந்தை.</span></p></article>
+          <article class="value reveal" data-d="1" data-tilt><span class="value__glyph" aria-hidden="true">அறிவு</span><h3><span lang="en">Arivu · Knowledge</span><span lang="ta">அறிவு</span></h3><p><span lang="en">Education is the surest road out of poverty.</span><span lang="ta">வறுமையிலிருந்து மீளும் உறுதியான வழி கல்வி.</span></p></article>
+          <article class="value reveal" data-d="2" data-tilt><span class="value__glyph" aria-hidden="true">அன்னம்</span><h3><span lang="en">Annam · Food</span><span lang="ta">அன்னம்</span></h3><p><span lang="en">No one should learn or grow old on an empty stomach.</span><span lang="ta">பசியோடு யாரும் கற்கவோ முதுமை அடையவோ கூடாது.</span></p></article>
+          <article class="value reveal" data-d="3" data-tilt><span class="value__glyph" aria-hidden="true">அறம்</span><h3><span lang="en">Aram · Virtue</span><span lang="ta">அறம்</span></h3><p><span lang="en">The Thirukkural guides how we teach and how we live.</span><span lang="ta">திருக்குறள் வழியே எங்கள் கல்வியும் வாழ்வும்.</span></p></article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ PILLARS ============ -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <span class="eyebrow"><span lang="en">Our homes</span><span lang="ta">எங்கள் இல்லங்கள்</span></span>
+          <h2 id="work-title"><span lang="en">Three homes, one family.</span><span lang="ta">மூன்று இல்லங்கள், ஒரே குடும்பம்</span></h2>
+        </div>
+        <div class="pillars">
+          <a class="pillar reveal" data-tilt href="/children-home.html">
+            <div class="media" data-src="/images/children-home.jpg" data-alt-en="Children at the Thai Thondu Maiyam home" data-alt-ta="தாய் தொண்டு மையக் குழந்தைகள்" aria-label="Children at the Thai Thondu Maiyam home" role="img"></div>
+            <div class="pillar__body">
+              <span class="pillar__num">01 · 1998</span>
+              <h3><span lang="en">Children's Home</span><span lang="ta">குழந்தைகள் இல்லம்</span></h3>
+              <p><span lang="en">Education, food, clothing and medical care for 200+ children.</span><span lang="ta">200க்கும் மேற்பட்ட குழந்தைகளுக்கு கல்வி, உணவு, உடை, மருத்துவம்.</span></p>
+              <span class="pillar__go"><span lang="en">See the home</span><span lang="ta">மேலும் அறிய</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+            </div>
+          </a>
+          <a class="pillar reveal" data-d="1" data-tilt href="/school.html">
+            <div class="media" data-src="/images/school.jpg" data-alt-en="Students at Thiruvalluvar Nursery and Primary School" data-alt-ta="திருவள்ளுவர் பள்ளி மாணவர்கள்" aria-label="Students at Thiruvalluvar Nursery and Primary School" role="img"></div>
+            <div class="pillar__body">
+              <span class="pillar__num">02 · 2014</span>
+              <h3><span lang="en">Thiruvalluvar School</span><span lang="ta">திருவள்ளுவர் பள்ளி</span></h3>
+              <p><span lang="en">Nursery and primary education for village children.</span><span lang="ta">கிராமக் குழந்தைகளுக்கான மழலையர் தொடக்கக் கல்வி.</span></p>
+              <span class="pillar__go"><span lang="en">Visit the school</span><span lang="ta">மேலும் அறிய</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+            </div>
+          </a>
+          <a class="pillar reveal" data-d="2" data-tilt href="/elder-care.html">
+            <div class="media" data-src="/images/elder-care.jpg" data-alt-en="Elders cared for at the home" data-alt-ta="மூத்தோர் இல்லம்" aria-label="Elders cared for at the home" role="img"></div>
+            <div class="pillar__body">
+              <span class="pillar__num">03 · 2006 – 2014</span>
+              <h3><span lang="en">Elder Home</span><span lang="ta">மூத்தோர் இல்லம்</span></h3>
+              <p><span lang="en">Eight years of shelter and care for our elders.</span><span lang="ta">எட்டு ஆண்டுகள் மூத்தோருக்கு அன்பும் அரவணைப்பும்.</span></p>
+              <span class="pillar__go"><span lang="en">Read the story</span><span lang="ta">மேலும் அறிய</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IMPACT ============ -->
+    <section class="section" style="padding-top:0" aria-label="Impact">
+      <div class="wrap impact">
+        <div class="stat reveal"><b><span data-count="33">33</span></b><span><span lang="en">years of service</span><span lang="ta">ஆண்டுகள் சேவை</span></span></div>
+        <div class="stat reveal" data-d="1"><b><span data-count="200">200</span><em>+</em></b><span><span lang="en">children supported</span><span lang="ta">குழந்தைகள் பயனடைந்துள்ளனர்</span></span></div>
+        <div class="stat reveal" data-d="2"><b><span data-count="12">12</span></b><span><span lang="en">years of Thiruvalluvar School</span><span lang="ta">ஆண்டுகள் திருவள்ளுவர் பள்ளி</span></span></div>
+        <div class="stat reveal" data-d="3"><b><span data-count="8">8</span></b><span><span lang="en">years of elder care</span><span lang="ta">ஆண்டுகள் மூத்தோர் சேவை</span></span></div>
+      </div>
+    </section>
+
+    <!-- ============ HOW YOUR GIFT TRAVELS ============ -->
+    <section class="section how-sec" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <span class="eyebrow"><span lang="en">How your gift travels</span><span lang="ta">உங்கள் உதவியின் பயணம்</span></span>
+          <h2 id="how-title"><span lang="en">From your hands to a child's plate and pencil.</span><span lang="ta">உங்கள் கையிலிருந்து ஒரு குழந்தையின் தட்டுக்கும் எழுதுகோலுக்கும்</span></h2>
+        </div>
+        <ol class="how">
+          <li class="reveal"><span class="how__n">01</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg><h3><span lang="en">You give</span><span lang="ta">நீங்கள் அளிக்கிறீர்கள்</span></h3><p><span lang="en">Sponsor a child, offer a day of annadhanam, or support the school.</span><span lang="ta">ஒரு குழந்தையைப் பேணுங்கள், ஒரு நாள் அன்னதானம் வழங்குங்கள், அல்லது பள்ளிக்கு உதவுங்கள்.</span></p></li>
+          <li class="reveal" data-d="1"><span class="how__n">02</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18a9 9 0 0 1-18 0zM8 8c0-1.5 1-2 1-3.5M12 8c0-1.5 1-2 1-3.5M16 8c0-1.5 1-2 1-3.5"/></svg><h3><span lang="en">We provide</span><span lang="ta">நாங்கள் வழங்குகிறோம்</span></h3><p><span lang="en">Your gift becomes food, books, clothes and medical care.</span><span lang="ta">உங்கள் உதவி உணவாக, நூலாக, உடையாக, மருத்துவமாக மாறுகிறது.</span></p></li>
+          <li class="reveal" data-d="2"><span class="how__n">03</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15zM5 19l8-8"/></svg><h3><span lang="en">A child grows</span><span lang="ta">ஒரு குழந்தை வளர்கிறது</span></h3><p><span lang="en">A child who eats well, learns well and dares to dream. Come and see it for yourself.</span><span lang="ta">நன்றாக உண்டு, நன்றாகக் கற்று, கனவு காணும் ஒரு குழந்தை. நேரில் வந்து காணுங்கள்.</span></p></li>
+        </ol>
+      </div>
+    </section>
+
+
+    <!-- ============ ANNADHANAM ============ -->
+    <section class="anna" aria-labelledby="anna-title">
+      <div class="anna__marquee" aria-hidden="true">
+        <span>Annadhanam <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 4 5 6 5 11a5 5 0 0 1-10 0c0-3 2-4 2-7 2 1 3 3 3 5 1-2 0-6 0-9z"/></svg> அன்னதானம் <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 4 5 6 5 11a5 5 0 0 1-10 0c0-3 2-4 2-7 2 1 3 3 3 5 1-2 0-6 0-9z"/></svg></span>
+        <span>Annadhanam <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 4 5 6 5 11a5 5 0 0 1-10 0c0-3 2-4 2-7 2 1 3 3 3 5 1-2 0-6 0-9z"/></svg> அன்னதானம் <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 4 5 6 5 11a5 5 0 0 1-10 0c0-3 2-4 2-7 2 1 3 3 3 5 1-2 0-6 0-9z"/></svg></span>
+      </div>
+      <div class="wrap anna__body">
+        <div class="reveal">
+          <span class="eyebrow"><span lang="en">The sacred gift of food</span><span lang="ta">புனிதமான உணவுக் கொடை</span></span>
+          <h2 id="anna-title" style="margin-top:16px"><span lang="en">Of all gifts, food is the first.</span><span lang="ta">தானத்தில் சிறந்தது அன்னதானம்</span></h2>
+        </div>
+        <p class="reveal" data-d="1"><span lang="en">Alongside every home we have built, annadhanam has continued. A plate of food, served with respect, to anyone who comes hungry.</span><span lang="ta">எங்கள் ஒவ்வொரு சேவையுடனும் தொடர்ந்து அன்னதானம் நடைபெற்று வருகிறது. பசியோடு வருபவருக்கு மரியாதையுடன் ஒரு வேளை உணவு.</span></p>
+      </div>
+    </section>
+
+    <!-- ============ MOMENTS ============ -->
+    <section class="section moments-sec" aria-labelledby="moments-title">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <span class="eyebrow"><span lang="en">Moments</span><span lang="ta">தருணங்கள்</span></span>
+          <h2 id="moments-title"><span lang="en">Thirty three years, in pictures.</span><span lang="ta">முப்பத்து மூன்று ஆண்டுகள், படங்களில்</span></h2>
+        </div>
+      </div>
+      <div class="moments" aria-label="Photo reel">
+        <div class="moments__row"><div class="media" data-src="/images/moments-1.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 1" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 1" aria-label="A moment at Thai Thondu Maiyam, photo 1" role="img"></div><div class="media" data-src="/images/moments-2.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 2" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 2" aria-label="A moment at Thai Thondu Maiyam, photo 2" role="img"></div><div class="media" data-src="/images/moments-3.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 3" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 3" aria-label="A moment at Thai Thondu Maiyam, photo 3" role="img"></div><div class="media" data-src="/images/moments-4.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 4" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 4" aria-label="A moment at Thai Thondu Maiyam, photo 4" role="img"></div><div class="media" data-src="/images/moments-5.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 5" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 5" aria-label="A moment at Thai Thondu Maiyam, photo 5" role="img"></div><div class="media" data-src="/images/moments-6.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 6" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 6" aria-label="A moment at Thai Thondu Maiyam, photo 6" role="img"></div><div class="media" data-src="/images/moments-1.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 1" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 1" aria-label="A moment at Thai Thondu Maiyam, photo 1" role="img"></div><div class="media" data-src="/images/moments-2.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 2" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 2" aria-label="A moment at Thai Thondu Maiyam, photo 2" role="img"></div><div class="media" data-src="/images/moments-3.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 3" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 3" aria-label="A moment at Thai Thondu Maiyam, photo 3" role="img"></div><div class="media" data-src="/images/moments-4.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 4" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 4" aria-label="A moment at Thai Thondu Maiyam, photo 4" role="img"></div><div class="media" data-src="/images/moments-5.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 5" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 5" aria-label="A moment at Thai Thondu Maiyam, photo 5" role="img"></div><div class="media" data-src="/images/moments-6.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 6" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 6" aria-label="A moment at Thai Thondu Maiyam, photo 6" role="img"></div></div>
+        <div class="moments__row moments__row--rev"><div class="media" data-src="/images/moments-7.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 7" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 7" aria-label="A moment at Thai Thondu Maiyam, photo 7" role="img"></div><div class="media" data-src="/images/moments-8.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 8" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 8" aria-label="A moment at Thai Thondu Maiyam, photo 8" role="img"></div><div class="media" data-src="/images/moments-9.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 9" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 9" aria-label="A moment at Thai Thondu Maiyam, photo 9" role="img"></div><div class="media" data-src="/images/moments-10.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 10" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 10" aria-label="A moment at Thai Thondu Maiyam, photo 10" role="img"></div><div class="media" data-src="/images/moments-11.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 11" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 11" aria-label="A moment at Thai Thondu Maiyam, photo 11" role="img"></div><div class="media" data-src="/images/moments-12.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 12" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 12" aria-label="A moment at Thai Thondu Maiyam, photo 12" role="img"></div><div class="media" data-src="/images/moments-7.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 7" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 7" aria-label="A moment at Thai Thondu Maiyam, photo 7" role="img"></div><div class="media" data-src="/images/moments-8.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 8" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 8" aria-label="A moment at Thai Thondu Maiyam, photo 8" role="img"></div><div class="media" data-src="/images/moments-9.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 9" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 9" aria-label="A moment at Thai Thondu Maiyam, photo 9" role="img"></div><div class="media" data-src="/images/moments-10.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 10" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 10" aria-label="A moment at Thai Thondu Maiyam, photo 10" role="img"></div><div class="media" data-src="/images/moments-11.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 11" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 11" aria-label="A moment at Thai Thondu Maiyam, photo 11" role="img"></div><div class="media" data-src="/images/moments-12.jpg" data-alt-en="A moment at Thai Thondu Maiyam, photo 12" data-alt-ta="தாய் தொண்டு மையத் தருணம், படம் 12" aria-label="A moment at Thai Thondu Maiyam, photo 12" role="img"></div></div>
+      </div>
+    </section>
+
+
+    <!-- ============ SUPPORT ============ -->
+    <section class="section" id="support" aria-labelledby="support-title">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <span class="eyebrow"><span lang="en">Walk with us</span><span lang="ta">எங்களுடன் இணையுங்கள்</span></span>
+          <h2 id="support-title"><span lang="en">Your support becomes a child's tomorrow.</span><span lang="ta">உங்கள் உதவி ஒரு குழந்தையின் நாளை</span></h2>
+          <p><span lang="en">Every contribution goes directly to the children, the school and the kitchen.</span><span lang="ta">ஒவ்வொரு பங்களிப்பும் நேரடியாக குழந்தைகள், பள்ளி மற்றும் அன்னதானத்திற்குச் செல்கிறது.</span></p>
+        </div>
+        <div class="support">
+          <div class="way reveal">
+            <span class="way__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg></span>
+            <h3><span lang="en">Sponsor a child</span><span lang="ta">ஒரு குழந்தையைப் பேணுங்கள்</span></h3>
+            <p><span lang="en">Cover a child's education, food, clothing and medical care at the Children's Home.</span><span lang="ta">குழந்தைகள் இல்லத்தில் ஒரு குழந்தையின் கல்வி, உணவு, உடை, மருத்துவச் செலவை ஏற்றுக்கொள்ளுங்கள்.</span></p>
+          </div>
+          <div class="way reveal" data-d="1">
+            <span class="way__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18a9 9 0 0 1-18 0zM8 8c0-1.5 1-2 1-3.5M12 8c0-1.5 1-2 1-3.5M16 8c0-1.5 1-2 1-3.5"/></svg></span>
+            <h3><span lang="en">Offer annadhanam</span><span lang="ta">அன்னதானம் வழங்குங்கள்</span></h3>
+            <p><span lang="en">Sponsor a day of meals in the name of someone you love, or on a day that matters to you.</span><span lang="ta">உங்கள் அன்புக்குரியவர் பெயரில் அல்லது சிறப்பு நாளில் ஒரு நாள் அன்னதானம் வழங்குங்கள்.</span></p>
+          </div>
+          <div class="way reveal" data-d="2">
+            <span class="way__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6c3-1 7-1 10 1 3-2 7-2 10-1v13c-3-1-7-1-10 1-3-2-7-2-10-1zM12 7v13"/></svg></span>
+            <h3><span lang="en">Support the school</span><span lang="ta">பள்ளிக்கு உதவுங்கள்</span></h3>
+            <p><span lang="en">Books, uniforms, teachers and classrooms for Thiruvalluvar Nursery &amp; Primary School.</span><span lang="ta">திருவள்ளுவர் பள்ளிக்கு நூல்கள், சீருடைகள், ஆசிரியர்கள், வகுப்பறைகள்.</span></p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section faq-sec" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq__grid">
+        <div class="section__head reveal">
+          <span class="eyebrow"><span lang="en">Questions</span><span lang="ta">கேள்விகள்</span></span>
+          <h2 id="faq-title"><span lang="en">Before you give.</span><span lang="ta">உதவும் முன்</span></h2>
+          <p><span lang="en">Anything else? We are happy to talk.</span><span lang="ta">வேறு ஏதேனும்? பேச மகிழ்ச்சி.</span></p>
+        </div>
+        <div class="faq">
+          <details class="reveal" open><summary><span lang="en">How can I sponsor a child?</span><span lang="ta">ஒரு குழந்தையை எப்படிப் பேணலாம்?</span><i aria-hidden="true"></i></summary><p><span lang="en">Reach us through the contact details below. We will share what sponsorship covers: education, food, clothing and medical care.</span><span lang="ta">கீழே உள்ள தொடர்பு விவரங்களில் எங்களை அணுகுங்கள். கல்வி, உணவு, உடை, மருத்துவம் என பேணுதலில் அடங்குவதை விளக்குவோம்.</span></p></details>
+          <details class="reveal"><summary><span lang="en">Can I offer annadhanam on a birthday or memorial day?</span><span lang="ta">பிறந்தநாள் அல்லது நினைவு நாளில் அன்னதானம் வழங்கலாமா?</span><i aria-hidden="true"></i></summary><p><span lang="en">Yes. Tell us the date and the name you would like it offered in, and we will arrange it.</span><span lang="ta">ஆம். தேதியையும் யார் பெயரில் வழங்க வேண்டும் என்பதையும் தெரிவியுங்கள்; நாங்கள் ஏற்பாடு செய்வோம்.</span></p></details>
+          <details class="reveal"><summary><span lang="en">Can I visit the home and the school?</span><span lang="ta">இல்லத்தையும் பள்ளியையும் நேரில் பார்வையிடலாமா?</span><i aria-hidden="true"></i></summary><p><span lang="en">We welcome visitors. Please call ahead so we can show you around without disturbing the children's day.</span><span lang="ta">அன்புடன் வரவேற்கிறோம். குழந்தைகளின் அன்றாடம் பாதிக்காமல் இருக்க முன்கூட்டியே அழைத்துவிட்டு வாருங்கள்.</span></p></details>
+          <details class="reveal"><summary><span lang="en">Can I donate books, clothes or supplies?</span><span lang="ta">நூல்கள், உடைகள், பொருட்கள் வழங்கலாமா?</span><i aria-hidden="true"></i></summary><p><span lang="en">Yes. Speak with us first so we can tell you what is needed most right now.</span><span lang="ta">ஆம். தற்போது எது அதிகம் தேவை என்பதை அறிய முதலில் எங்களிடம் பேசுங்கள்.</span></p></details>
+          <details class="reveal"><summary><span lang="en">Where does my donation go?</span><span lang="ta">என் நன்கொடை எங்கு செல்கிறது?</span><i aria-hidden="true"></i></summary><p><span lang="en">Directly to the Children's Home, Thiruvalluvar Nursery &amp; Primary School and annadhanam.</span><span lang="ta">நேரடியாக குழந்தைகள் இல்லம், திருவள்ளுவர் மழலையர் தொடக்கப்பள்ளி மற்றும் அன்னதானத்திற்கு.</span></p></details>
+          <details class="reveal"><summary><span lang="en">Is my donation eligible for tax exemption?</span><span lang="ta">என் நன்கொடைக்கு வரி விலக்கு உண்டா?</span><i aria-hidden="true"></i></summary><p><span lang="en">Please contact us for our current registration and tax exemption details.</span><span lang="ta">எங்கள் பதிவு மற்றும் வரி விலக்கு விவரங்களுக்கு எங்களைத் தொடர்பு கொள்ளுங்கள்.</span></p></details>
+          <details class="reveal"><summary><span lang="en">Can I volunteer?</span><span lang="ta">தன்னார்வலராக இணையலாமா?</span><i aria-hidden="true"></i></summary><p><span lang="en">Yes. Teaching, mentoring, health camps and festival help are all welcome. Get in touch and we will find the right fit.</span><span lang="ta">ஆம். கற்பித்தல், வழிகாட்டுதல், மருத்துவ முகாம், பண்டிகை உதவி என அனைத்தும் வரவேற்கப்படுகின்றன. எங்களைத் தொடர்பு கொள்ளுங்கள்.</span></p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CLOSING CTA ============ -->
+    <section class="section closing" id="contact" aria-label="Contact">
+      <div class="wrap">
+        <div class="cta-final reveal" style="margin-top:0">
+          <svg class="cta-final__rays" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><g id="r"><path d="M100 0l4 70h-8z"/></g><use href="#r" transform="rotate(30 100 100)"/><use href="#r" transform="rotate(60 100 100)"/><use href="#r" transform="rotate(90 100 100)"/><use href="#r" transform="rotate(120 100 100)"/><use href="#r" transform="rotate(150 100 100)"/><use href="#r" transform="rotate(180 100 100)"/><use href="#r" transform="rotate(210 100 100)"/><use href="#r" transform="rotate(240 100 100)"/><use href="#r" transform="rotate(270 100 100)"/><use href="#r" transform="rotate(300 100 100)"/><use href="#r" transform="rotate(330 100 100)"/><circle cx="100" cy="100" r="22"/></svg>
+          <div>
+            <h2><span lang="en">Be part of the next chapter.</span><span lang="ta">அடுத்த அத்தியாயத்தில் நீங்களும் இணையுங்கள்</span></h2>
+            <p><span lang="en">Meet us at the event, call us, or visit the home. We would be honoured to show you around.</span><span lang="ta">நிகழ்வில் சந்தியுங்கள், அழையுங்கள், அல்லது இல்லத்திற்கு வாருங்கள். உங்களை வரவேற்பதில் மகிழ்ச்சி.</span></p>
+          </div>
+          <!-- TODO: replace the three contact values below with the real ones -->
+          <div class="cta-final__contact">
+            <a href="tel:+910000000000">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
+              <span><small><span lang="en">Call</span><span lang="ta">அழைக்க</span></small>+91 00000 00000</span>
+            </a>
+            <a href="mailto:hello@example.org">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v14H3zM3 6l9 7 9-7"/></svg>
+              <span><small><span lang="en">Write</span><span lang="ta">மின்னஞ்சல்</span></small>hello@example.org</span>
+            </a>
+            <div>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span><small><span lang="en">Visit</span><span lang="ta">முகவரி</span></small><span lang="en">Address to be added</span><span lang="ta">முகவரி சேர்க்கப்படும்</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="/"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 60V14M32 6l-5 10h10zM18 10c0 12 4 18 14 18s14-6 14-18M18 10l-3 6M46 10l3 6"/></svg><span lang="en">Thai Thondu Maiyam</span><span lang="ta">தாய் தொண்டு மையம்</span></a>
+          <p class="footer__blurb"><span lang="en">Service is our worship. Since 1993.</span><span lang="ta">தொண்டே எங்கள் வழிபாடு. 1993 முதல்.</span></p>
+          <p class="footer__mantra" lang="ta">ஓம் நமசிவாய</p>
+        </div>
+        <nav aria-label="Explore">
+          <h3><span lang="en">Explore</span><span lang="ta">பக்கங்கள்</span></h3>
+          <a href="#journey"><span lang="en">Our journey</span><span lang="ta">எங்கள் பயணம்</span></a>
+          <a href="#temple"><span lang="en">The sanctum</span><span lang="ta">சன்னிதி</span></a>
+          <a href="/children-home.html"><span lang="en">Children's Home</span><span lang="ta">குழந்தைகள் இல்லம்</span></a>
+          <a href="/school.html"><span lang="en">Thiruvalluvar School</span><span lang="ta">திருவள்ளுவர் பள்ளி</span></a>
+          <a href="/elder-care.html"><span lang="en">Elder Home</span><span lang="ta">மூத்தோர் இல்லம்</span></a>
+        </nav>
+        <nav aria-label="Give">
+          <h3><span lang="en">Give</span><span lang="ta">உதவ</span></h3>
+          <a href="#support"><span lang="en">Sponsor a child</span><span lang="ta">குழந்தையைப் பேணுங்கள்</span></a>
+          <a href="#support"><span lang="en">Offer annadhanam</span><span lang="ta">அன்னதானம்</span></a>
+          <a href="#faq"><span lang="en">Questions</span><span lang="ta">கேள்விகள்</span></a>
+          <a href="#contact"><span lang="en">Contact</span><span lang="ta">தொடர்பு</span></a>
+        </nav>
+      </div>
+      <p class="footer__small">© <span id="year">2026</span> <span lang="en">Thai Thondu Maiyam. Founded 1993 by Thai Rasi Jegatheeswaran.</span><span lang="ta">தாய் தொண்டு மையம். 1993 இல் தாய் ராசி ஜெகதீஸ்வரன் அவர்களால் நிறுவப்பட்டது.</span></p>
+    </div>
+  </footer>
+</body>
+</html>
