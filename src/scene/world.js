@@ -111,6 +111,8 @@ export function createWorld(canvas, { mode = 'home', state, anchor = null, templ
     pointer.set((e.clientX / w) * 2 - 1, (e.clientY / h) * 2 - 1);
   }, { passive: true });
 
+  const nav = document.querySelector('.nav');
+
   // DOM rect → world position on the z = 0 plane
   const toWorld = (r) => [
     (((r.left + r.width / 2) / w) * 2 - 1) * halfW,
@@ -131,8 +133,20 @@ export function createWorld(canvas, { mode = 'home', state, anchor = null, templ
     dust.rotation.y = look.x * 0.08;
 
     if (mode === 'home') {
-      const k = narrow ? Math.min(0.48, halfW / 3.2) : Math.min(1, halfW / 5.2 + 0.2);
-      shivaRoot.position.set(narrow ? 0 : state.shiva.xf * halfW, state.shiva.y + (narrow ? 1.7 : 0), 0);
+      let k = Math.min(1, halfW / 5.2 + 0.2);
+      let baseY = 0;
+      if (narrow) {
+        // phones: fit the flame ring into the gap between the floating nav
+        // and the hero text (which starts at 40svh), never underneath the nav
+        const OUTER = 2.35; // ring radius + flame height, in model units
+        // offsets ignore the hide on scroll transform, so Shiva does not jump
+        const navBottom = (nav ? nav.offsetTop + nav.offsetHeight : 80) + 12;
+        const textTop = h * 0.4 - 8;
+        const room = pxToWorld(textTop - navBottom);
+        k = Math.min(0.48, halfW / 2.6, room / (OUTER * 2));
+        baseY = halfH - pxToWorld(navBottom) - OUTER * k - 0.1;
+      }
+      shivaRoot.position.set(narrow ? 0 : state.shiva.xf * halfW, state.shiva.y + baseY, 0);
       shivaRoot.scale.setScalar(state.shiva.s * k);
       shivaRoot.visible = state.shiva.s > 0.02 && state.shiva.y < 6;
       shiva.scale.setScalar(Math.max(0.001, state.shivaIn));
