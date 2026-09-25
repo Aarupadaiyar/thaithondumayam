@@ -11,6 +11,8 @@ export default defineConfig({
         children: page('children-home.html'),
         school: page('school.html'),
         elders: page('elder-care.html'),
+        thiruppani: page('thiruppani.html'),
+        award: page('award-ceremony.html'),
         notFound: page('404.html'),
       },
     },

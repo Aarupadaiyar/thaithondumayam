@@ -2,6 +2,7 @@
 // photo slots, lightbox, counters and the tagline word reveal.
 import './styles.css';
 import './sections.css';
+import './events.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
@@ -110,7 +111,7 @@ document.querySelectorAll('.media[data-src]').forEach((slot) => {
 const box = document.querySelector('.lightbox');
 if (box) {
   const big = box.querySelector('img');
-  document.querySelectorAll('.gallery .media').forEach((m) => {
+  document.querySelectorAll('.gallery .media, .media--poster').forEach((m) => {
     m.tabIndex = 0;
     const open = () => {
       const img = m.querySelector('img');
@@ -127,6 +128,21 @@ if (box) {
   box.addEventListener('click', close);
   document.addEventListener('keydown', (e) => e.key === 'Escape' && close());
 }
+
+/* ---------- copy a number (GPay) to the clipboard ---------- */
+document.querySelectorAll('[data-copy-btn]').forEach((btn) => {
+  const label = btn.innerHTML;
+  btn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(btn.dataset.copyBtn);
+      btn.classList.add('copied');
+      btn.innerHTML = '<span lang="en">Copied</span><span lang="ta">நகலெடுக்கப்பட்டது</span>';
+    } catch {
+      btn.innerHTML = btn.dataset.copyBtn; // clipboard blocked: show the number to copy by hand
+    }
+    setTimeout(() => { btn.classList.remove('copied'); btn.innerHTML = label; }, 2200);
+  });
+});
 
 /* ---------- scroll reveals ---------- */
 const io = new IntersectionObserver(
